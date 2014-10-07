@@ -1,0 +1,131 @@
+@import url(http://fonts.googleapis.com/css?family=Bangers);
+
+.tooltip {
+	position: relative;
+	width: 210px;
+	margin: 0 auto;
+	font-family: 'Bangers', cursive;
+}
+
+.tooltip-content {
+	position: absolute;
+	line-height: 1.2;
+	pointer-events: none;
+	text-align: center;
+	z-index: 100;
+	opacity: 0;
+	padding: 1.75em;
+	font-size: 1.05em;
+	bottom: 100%;
+}
+
+.tooltip-effect-1 .tooltip-content {
+	width: 180px;
+	right: 83%;
+	margin: 0 0 20px 0;
+	-webkit-transform: scale3d(0,0,1);
+	transform: scale3d(0,0,1);
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+}
+
+.tooltip-effect-2 .tooltip-content {
+	width: 220px;
+	left: 50%;
+	margin: 0 0 40px -110px;
+	-webkit-transform: translate3d(0,-10px,0);
+	transform: translate3d(0,-10px,0);
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+}
+
+.tooltip-effect-1:hover .tooltip-content {
+	opacity: 1;
+	-webkit-transform: scale3d(1,1,1);
+	transform: scale3d(1,1,1);
+	-webkit-transition-delay: 0.15s;
+	transition-delay: 0.15s;
+}
+
+.tooltip-effect-2:hover .tooltip-content {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+	-webkit-transition-delay: 0.2s;
+	transition-delay: 0.2s;
+}
+
+/* Shape */
+.tooltip-shape {
+	position: absolute;
+	width: 220px;
+	height: 165px;
+	pointer-events: none;
+}
+
+.tooltip-effect-1 .tooltip-shape {
+	top: 0;
+	right: 65%;
+	-webkit-transform: translate3d(0,-90%,0);
+	transform: translate3d(0,-90%,0);
+}
+
+.tooltip-effect-2 .tooltip-shape {
+	bottom: 100%;
+	left: 50%;
+	margin: 0 0 0 -110px;
+}
+
+.tooltip:hover .tooltip-shape {
+	pointer-events: auto;
+}
+
+.tooltip-shape svg {
+	stroke: #e74c3c;
+	stroke-width: 2;
+}
+
+.tooltip-effect-1 .tooltip-shape svg path {
+	fill: #fff;
+	opacity: 0;
+	-webkit-transform: scale3d(0,0,1);
+	transform: scale3d(0,0,1);
+	-webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+}
+
+.tooltip-effect-1:hover .tooltip-shape svg path {
+	opacity: 1;
+	-webkit-transform: scale3d(1,1,1);
+	transform: scale3d(1,1,1);
+}
+
+.tooltip-effect-1:hover .tooltip-shape svg path#path2 {
+	-webkit-transition-delay: 0.07s;
+	transition-delay: 0.07s;
+}
+
+.tooltip-effect-1:hover .tooltip-shape svg path#path3 {
+	-webkit-transition-delay: 0.14s;
+	transition-delay: 0.14s;
+}
+
+.tooltip-effect-1:hover .tooltip-shape svg path#path4 {
+	-webkit-transition-delay: 0.21s;
+	transition-delay: 0.21s;
+}
+
+.tooltip-effect-2 .tooltip-shape svg polygon {
+	fill: transparent;
+	stroke-dasharray: 580;
+	stroke-dashoffset: 580;
+}
+
+.tooltip-effect-2:hover .tooltip-shape svg polygon {
+	stroke-dashoffset: 0;
+	fill: #fff;
+	-webkit-transition: stroke-dashoffset 0.8s, fill 0.8s;
+	transition: stroke-dashoffset 0.8s, fill 0.8s;
+}

@@ -1,0 +1,74 @@
+@import url(http://fonts.googleapis.com/css?family=Indie+Flower);
+
+.tooltip {
+	display: inline;
+	position: relative;
+	z-index: 999;
+}
+
+/* Trigger text */
+
+.tooltip-item {
+	color: #2fa0ec;
+	cursor: pointer;
+	z-index: 100;
+	position: relative;
+	display: inline-block;
+	font-weight: 700;
+	-webkit-transition: background-color 0.3s, color 0.3s, -webkit-transform 0.3s;
+	transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.tooltip:hover .tooltip-item {
+	color: #fff;
+	-webkit-transform: translate3d(0,-0.5em,0);
+	transform: translate3d(0,-0.5em,0);
+}
+
+/* Tooltip */
+
+.tooltip-content {
+	position: absolute;
+	z-index: 99;
+	width: 360px;
+	left: 50%;
+	margin-left: -180px;
+	bottom: -5px;
+	text-align: left;
+	background: #2fa0ec;
+	opacity: 0;
+	font-size: 0.75em;
+	line-height: 1.5;
+	padding: 1.5em;
+	color: #fff;
+	border-bottom: 65px solid #2a3035;
+	cursor: default;
+	pointer-events: none;
+	border-radius: 5px;
+	font-family: 'Indie Flower', cursive;
+	-webkit-transform: translate3d(0,-0.5em,0);
+	transform: translate3d(0,-0.5em,0);
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+}
+
+.tooltip-content a {
+	color: #32434f;
+}
+
+.tooltip-text {
+	opacity: 0;
+	-webkit-transform: translate3d(0,1.5em,0);
+	transform: translate3d(0,1.5em,0);
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+}
+
+.tooltip:hover .tooltip-content,
+.tooltip:hover .tooltip-text {
+	pointer-events: auto;
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
